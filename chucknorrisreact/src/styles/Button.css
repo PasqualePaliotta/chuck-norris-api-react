@@ -1,0 +1,15 @@
+.Button{
+	display: block;
+	width: 100%;
+	max width: 200 px;
+	line-height: 35 px;
+	background-color: #D68FD6;
+	border-radius: 10px;
+	margin: 10px;
+}
+
+.Button.disabled
+{
+	background-color: lightgray;
+}
+

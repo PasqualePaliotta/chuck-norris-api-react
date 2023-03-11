@@ -1,7 +1,8 @@
 import {useState} from 'react'
-import '/src/style/Button.css'
+import '../styles/Button.css'
 
-function Button (){
+function Button ()
+{
 	return
 	(
 		<div className="Button">
