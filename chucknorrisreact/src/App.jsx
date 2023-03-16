@@ -1,6 +1,6 @@
 import { useState } from 'react' //qualsiasi variabile che voglio inserire deve passare da usestate che restituisce una lista in cui il prijmo elemento è la variabile di
 import reactLogo from './assets/react.svg'
-import './App.css'
+import './styles/App.css'
 import Title from "./components/Title"
 
 function App() {
@@ -8,7 +8,6 @@ function App() {
 
   return (
     <div className="App">
-        hello {count}
         <Title />
         
     </div>
