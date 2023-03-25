@@ -2,14 +2,15 @@ import { useState } from 'react' //qualsiasi variabile che voglio inserire deve 
 import reactLogo from './assets/react.svg'
 import './styles/App.css'
 import Title from "./components/Title"
+import Button from "./components/Button"
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <div className="App">
-        <Title />
-        
+        <Title></Title>
+        <Button />
+        <div>Prova</div>
     </div>
   )
 }

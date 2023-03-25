@@ -3,8 +3,7 @@ import '../styles/Button.css'
 
 function Button ()
 {
-	return
-	(
+	return (
 		<div className="Button">
 		Content
 		</div>
