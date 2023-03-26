@@ -9,14 +9,35 @@ function App() {
   const [joke, setJoke] = useState("")
 
   let loadJokeCallback = function(){
-    console.log("ciao")
-    setJoke("testo")
+    let cat = document.getElementById ("JokeType").value
+﻿  let url2 = "https://api.chucknorris.io/jokes/random" + (cat!=="random" ? "?category=" + cat : "")
+    fetch(url2).then((resp) => {
+      return resp.json()
+    }).then (JokeType=>{
+      setJoke(JokeType.value)
+    }).catch((e)=>{
+
+    })
   }
 
   let copyTextCallback = function(){
     console.log("bye")
 
   }
+
+  let url = "https://api.chucknorris.io/jokes/categories"
+  fetch(url).then((resp)=>{
+    return resp.json()
+  }).then(JokeType=>{
+    JokeType.unshift ("random")
+    setCategory(JokeType)
+  }).catch((e)=>{
+
+  })
+
+
+
+
   return (
     <div className='App'>
       <h1>Benvenuti</h1>

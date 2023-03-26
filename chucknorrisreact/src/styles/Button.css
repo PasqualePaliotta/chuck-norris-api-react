@@ -1,9 +1,9 @@
 .Button{
 	display: block;
 	width: 100%;
-	max width: 200 px;
-	line-height: 35 px;
-	background-color: #D68FD6;
+	max-width: 200px;
+	line-height: 35px;
+	background-color: red	;
 	border-radius: 10px;
 	margin: 10px;
 }
