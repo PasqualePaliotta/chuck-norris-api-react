@@ -7,7 +7,7 @@ function Textarea(props)
 	return(
 
 		<div className="Textarea">
-			<p id={props.id}>{props.children}</p>
+			<b><p id={props.id}>{props.children}</p></b>
 		</div>
 	)
 }
