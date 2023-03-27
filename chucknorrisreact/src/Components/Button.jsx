@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import '../Styles/Button.css'
+import '../styles/Button.css'
 
 function Button({ text, variant, callback }){     
 

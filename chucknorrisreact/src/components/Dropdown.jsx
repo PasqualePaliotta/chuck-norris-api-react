@@ -21,10 +21,10 @@ return(
 
     <div className={classRenderer()}>
     
-    <select name="JokeType" id="JokeType" defaultValue={"Scegli un opzione"} onChange={ChangeHandler}>
+    <select name="JokeType" id="JokeType" defaultValue={"random"} onChange={ChangeHandler}>
 
     
-    <option disabled>Scegli un opzione</option>   
+    <option>random</option>   
     {options.map((ele, id) => {return <option key={id} value={ele}>{ele}</option>})}
     
     </select> 

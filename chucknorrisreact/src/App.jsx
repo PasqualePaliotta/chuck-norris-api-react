@@ -1,8 +1,9 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
 import './Styles/App.css'
+import Title from './components/Title'
 import Button from './Components/Button'
 import Dropdown  from './components/Dropdown'
+import Textarea from './components/Textarea'
 
 
 function App() {
@@ -15,8 +16,8 @@ function App() {
 
 
   let loadJokeCallback = function(){
-﻿  let url2 = "https://api.chucknorris.io/jokes/random" + (currentCategory==="" ? "": "?category="+currentCategory)
-    fetch(url2).then((resp) => {
+    let url = "https://api.chucknorris.io/jokes/random" + (currentCategory==="" ? "": "?category="+currentCategory)
+    fetch(url).then((resp) => {
       return resp.json()
     }).then (JokeType=>{
       setJoke(JokeType.value)
@@ -26,8 +27,8 @@ function App() {
   }
 
   let copyTextCallback = function(){
-    console.log("bye")
-
+    let Textarea = document.getElementById("Textarea");
+    navigator.clipboard.writeText(Textarea.innerText);
   }
 
   let url = "https://api.chucknorris.io/jokes/categories"
@@ -48,12 +49,12 @@ function App() {
 
   return (
     <div className='App'>
-      <h1>Benvenuti</h1>
-      <p>Sito Chuck</p>
+      <Title></Title>
       <Dropdown options={categories} callback={setCurrentCategory}></Dropdown>
       <div id='contenutoJoke'>
     <Button text="carica il joke" callback={loadJokeCallback}></Button>
     <Button text="copia" variant={joke === "" ? "disabled": undefined }callback={copyTextCallback}></Button>
+    <Textarea id="Textarea">{joke}</Textarea>
       </div>
     </div>
   )
